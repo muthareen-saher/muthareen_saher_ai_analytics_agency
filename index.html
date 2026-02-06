@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muthareen Saher | AI & Business Intelligence Agency</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="AI-Powered Analytics for Smarter Business Decisions. Founder-led AI Analytics consultancy transforming data into strategic intelligence.">
+    <meta name="keywords" content="AI Analytics, Business Intelligence, Predictive Analytics, Data Automation, KPI Dashboards, BI Consulting">
+    <meta name="author" content="Muthareen Saher">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
+    
+    <style>
+        /* ===== CSS Variables ===== */
+        :root {
+            --primary-gradient: linear-gradient(135deg, #0a2463 0%, #1e88e5 50%, #00e5ff 100%);
+            --primary-gradient-light: linear-gradient(135deg, #1e88e5 0%, #29b6f6 100%);
+            --primary-dark: #0a2463;
+            --primary-blue: #1e88e5;
+            --accent-cyan: #00e5ff;
+            --accent-light: #e3f2fd;
+            --text-dark: #1a237e;
+            --text-medium: #37474f;
+            --text-light: #546e7a;
+            --white: #ffffff;
+            --light-gray: #f5f7fa;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.12);
+            --radius: 12px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* ===== Base Styles ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-medium);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: var(--white);
+        }
+
+        h1, h2, h3, h4, h5 {
+            color: var(--text-dark);
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .gradient-bg {
+            background: var(--primary-gradient);
+            color: var(--white);
+        }
+
+        .gradient-bg h2, .gradient-bg h3, .gradient-bg p {
+            color: var(--white);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background: var(--primary-gradient-light);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(30, 136, 229, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(30, 136, 229, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .btn-accent {
+            background: var(--accent-cyan);
+            color: var(--primary-dark);
+            font-weight: 700;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 40px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            height: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        /* ===== Navigation ===== */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(30, 136, 229, 0.1);
+            transition: var(--transition);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary-dark);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-cyan);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-gradient-light);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            cursor: pointer;
+        }
+
+        /* ===== Hero Section ===== */
+        .hero {
+            padding: 180px 0 100px;
+            background: var(--primary-gradient);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%2300e5ff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
+            animation: float 20s linear infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            100% { transform: translateY(-100px) rotate(360deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ===== Problems Section ===== */
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .problem-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--radius);
+            border-left: 4px solid var(--primary-blue);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .problem-card:hover {
+            transform: translateX(10px);
+            border-left-color: var(--accent-cyan);
+        }
+
+        .problem-card i {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+
+        /* ===== Solutions Section ===== */
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .solution-card {
+            text-align: center;
+            padding: 40px 30px;
+        }
+
+        .solution-card i {
+            font-size: 3rem;
+            background: var(--primary-gradient-light);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 25px;
+        }
+
+        /* ===== Services Preview ===== */
+        .services-preview {
+            background: var(--light-gray);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        /* ===== Case Studies ===== */
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .case-card {
+            overflow: hidden;
+        }
+
+        .case-img {
+            height: 200px;
+            background: var(--primary-gradient);
+            border-radius: var(--radius) var(--radius) 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .case-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .tag {
+            background: var(--accent-light);
+            color: var(--primary-blue);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* ===== About Page ===== */
+        .about-hero {
+            padding: 180px 0 100px;
+            background: var(--primary-gradient);
+            text-align: center;
+            color: white;
+        }
+
+        .founder-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-top: 60px;
+        }
+
+        .founder-img {
+            width: 100%;
+            max-width: 400px;
+            height: 400px;
+            background: var(--primary-gradient);
+            border-radius: var(--radius);
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+        }
+
+        .founder-bio h3 {
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+        }
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .expertise-item {
+            text-align: center;
+            padding: 30px;
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        /* ===== Blog ===== */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .blog-card {
+            overflow: hidden;
+        }
+
+        .blog-category {
+            display: inline-block;
+            padding: 5px 15px;
+            background: var(--accent-light);
+            color: var(--primary-blue);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        /* ===== Contact ===== */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 50px;
+        }
+
+        .contact-form {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: var(--radius);
+            font-family: 'Roboto', sans-serif;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.1);
+        }
+
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 25px;
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .contact-method:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-method i {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-gradient-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        /* ===== Footer ===== */
+        footer {
+            background: var(--primary-dark);
+            color: white;
+            padding: 80px 0 40px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .footer-col h3 {
+            color: white;
+            margin-bottom: 25px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-cyan);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--primary-blue);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* ===== WhatsApp Button ===== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+            z-index: 1000;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        /* ===== Responsive Design ===== */
+        @media (max-width: 992px) {
+            h1 { font-size: 2.8rem; }
+            h2 { font-size: 2.2rem; }
+            
+            .hero h1 { font-size: 3rem; }
+            
+            .founder-section,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .nav-links {
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                flex-direction: column;
+                background: var(--white);
+                padding: 40px;
+                box-shadow: var(--shadow);
+                transition: var(--transition);
+                gap: 30px;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .hero {
+                padding: 150px 0 80px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .section {
+                padding: 80px 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.8rem; }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .card, .contact-form {
+                padding: 30px 20px;
+            }
+            
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+        }
+
+        /* ===== Page Transitions ===== */
+        .page-content {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ===== Loading Animation ===== */
+        .loading {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-gradient);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top-color: var(--accent-cyan);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="loader"></div>
+    </div>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navigation -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#home" class="logo">
+                    <i class="fas fa-brain"></i>
+                    Muthareen<span>Analytics</span>
+                </a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#case-studies">Case Studies</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="page-content">
+        <!-- Home Page -->
+        <section id="home">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1>AI-Powered Analytics for Smarter Business Decisions</h1>
+                        <p>We design intelligent BI systems, predictive models, and automated dashboards that help startups and growing businesses scale with clarity.</p>
+                        <div class="hero-btns">
+                            <a href="#contact" class="btn btn-primary">
+                                <i class="fas fa-calendar-check"></i>
+                                Book a Free Strategy Call
+                            </a>
+                            <a href="#case-studies" class="btn btn-secondary">
+                                <i class="fas fa-chart-line"></i>
+                                View Case Studies
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Business Problems Section -->
+            <section class="section">
+                <div class="container">
+                    <h2>Common Business Challenges We Solve</h2>
+                    <div class="problems-grid">
+                        <div class="problem-card">
+                            <i class="fas fa-database"></i>
+                            <h3>Scattered Data Across Platforms</h3>
+                            <p>Your data lives in multiple systems without proper integration or single source of truth.</p>
+                        </div>
+                        <div class="problem-card">
+                            <i class="fas fa-tasks"></i>
+                            <h3>Manual Reporting Processes</h3>
+                            <p>Time-consuming manual data collection and report generation slowing down decision-making.</p>
+                        </div>
+                        <div class="problem-card">
+                            <i class="fas fa-bullseye"></i>
+                            <h3>No KPI Clarity</h3>
+                            <p>Lack of clear, actionable metrics to measure performance and guide strategic decisions.</p>
+                        </div>
+                        <div class="problem-card">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>No Forecasting Capability</h3>
+                            <p>Operating blind without predictive insights to anticipate trends and prepare for the future.</p>
+                        </div>
+                        <div class="problem-card">
+                            <i class="fas fa-lightbulb"></i>
+                            <h3>Lack of Decision Intelligence</h3>
+                            <p>Decisions based on intuition rather than data-driven insights and predictive analytics.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Solutions Section -->
+            <section class="section gradient-bg">
+                <div class="container">
+                    <h2>Our AI-Driven Solutions</h2>
+                    <div class="solutions-grid">
+                        <div class="card solution-card">
+                            <i class="fas fa-chart-bar"></i>
+                            <h3>AI-Driven Dashboards</h3>
+                            <p>Real-time interactive dashboards with intelligent insights and automated anomaly detection.</p>
+                        </div>
+                        <div class="card solution-card">
+                            <i class="fas fa-crystal-ball"></i>
+                            <h3>Predictive Sales Forecasting</h3>
+                            <p>Machine learning models that predict sales trends, customer behavior, and revenue opportunities.</p>
+                        </div>
+                        <div class="card solution-card">
+                            <i class="fas fa-funnel-dollar"></i>
+                            <h3>Marketing Performance Intelligence</h3>
+                            <p>Complete visibility into marketing ROI, attribution modeling, and campaign optimization.</p>
+                        </div>
+                        <div class="card solution-card">
+                            <i class="fas fa-robot"></i>
+                            <h3>Data Automation Systems</h3>
+                            <p>Automated data pipelines that eliminate manual work and ensure data accuracy and timeliness.</p>
+                        </div>
+                        <div class="card solution-card">
+                            <i class="fas fa-chart-network"></i>
+                            <h3>KPI Frameworks for Startups</h3>
+                            <p>Custom KPI frameworks aligned with business objectives and growth stage.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Overview -->
+            <section class="section services-preview">
+                <div class="container">
+                    <h2>Our Core Services</h2>
+                    <div class="services-grid">
+                        <div class="card">
+                            <i class="fas fa-brain" style="font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 20px;"></i>
+                            <h3>AI Business Intelligence Systems</h3>
+                            <p>Custom KPI dashboards and executive reporting systems powered by AI insights.</p>
+                            <a href="#services" class="btn btn-secondary" style="margin-top: 20px;">
+                                Learn More
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                        <div class="card">
+                            <i class="fas fa-chart-line" style="font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 20px;"></i>
+                            <h3>Predictive Analytics & Forecasting</h3>
+                            <p>Sales prediction, churn analysis, and revenue modeling using advanced ML algorithms.</p>
+                            <a href="#services" class="btn btn-secondary" style="margin-top: 20px;">
+                                Learn More
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Case Study Preview -->
+            <section class="section">
+                <div class="container">
+                    <h2>Featured Case Studies</h2>
+                    <div class="case-grid">
+                        <div class="card case-card">
+                            <div class="case-img">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <div class="case-content">
+                                <h3>E-commerce Sales Optimization</h3>
+                                <p>Implemented predictive analytics to increase conversion rates by 32% for an online retailer.</p>
+                                <div class="case-tags">
+                                    <span class="tag">Power BI</span>
+                                    <span class="tag">Python</span>
+                                    <span class="tag">Machine Learning</span>
+                                </div>
+                                <a href="#case-studies" class="btn btn-primary">Read Case Study</a>
+                            </div>
+                        </div>
+                        <div class="card case-card">
+                            <div class="case-img">
+                                <i class="fas fa-hospital"></i>
+                            </div>
+                            <div class="case-content">
+                                <h3>Healthcare Performance Analytics</h3>
+                                <p>Developed KPI dashboard system reducing reporting time by 80% for a healthcare provider.</p>
+                                <div class="case-tags">
+                                    <span class="tag">Tableau</span>
+                                    <span class="tag">SQL</span>
+                                    <span class="tag">Data Automation</span>
+                                </div>
+                                <a href="#case-studies" class="btn btn-primary">Read Case Study</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Final CTA -->
+            <section class="section gradient-bg">
+                <div class="container">
+                    <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                        <h2>Turn Your Data Into Strategy</h2>
+                        <p style="font-size: 1.2rem; margin-bottom: 40px;">Ready to transform your business with intelligent analytics? Let's build your data strategy together.</p>
+                        <a href="#contact" class="btn btn-accent">
+                            <i class="fas fa-calendar-alt"></i>
+                            Schedule a Strategy Call
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Services Page -->
+        <section id="services" class="section" style="display: none;">
+            <div class="container">
+                <h1>Our Services</h1>
+                <!-- Services content will be loaded here -->
+            </div>
+        </section>
+
+        <!-- Case Studies Page -->
+<section id="case-studies" class="section" style="display: none;">
+    <div class="container">
+        <h1>Case Studies</h1>
+
+        <div class="case-study">
+
+            <h2>Alibaba Sales Analysis Dashboard</h2>
+            <p><strong>Tools Used:</strong> Excel | SQL | Microsoft Power BI</p>
+
+            <h3>Project Overview</h3>
+            <p>
+                This project focuses on building an interactive e-commerce sales intelligence dashboard 
+                using an Alibaba retail dataset. The objective was to transform raw transactional data 
+                into a structured analytical model that provides visibility into sales performance, 
+                product contribution, brand performance, and operational costs.
+            </p>
+
+            <h3>Business Challenge</h3>
+            <p>
+                The business lacked a centralized reporting system to monitor sales, quantity trends, 
+                product performance, shipping costs, and tax impact. Decision-makers were unable to 
+                quickly identify revenue drivers, top-performing brands, or sales fluctuations over time.
+            </p>
+
+            <h3>Solution Approach</h3>
+            <p>
+                The dataset was cleaned and structured using Excel and SQL to create a relational data model. 
+                Key calculated metrics were developed, including total sales, total quantity, shipping cost, 
+                and tax. The final dashboard was built in Power BI with interactive filters for category, 
+                order date, delivery date, product, and delivery status.
+            </p>
+
+            <h3>Key Features</h3>
+            <ul>
+                <li>Executive KPI Summary (Sales, Quantity, Products, Categories, Shipping, Tax)</li>
+                <li>Sales Trend Analysis (Revenue vs Quantity over time)</li>
+                <li>Product-Level Revenue & Quantity Analysis</li>
+                <li>Brand Performance Comparison</li>
+                <li>Interactive drill-down filtering capabilities</li>
+            </ul>
+
+            <h3>Key Insights</h3>
+            <ul>
+                <li>Apple generated the highest revenue contribution.</li>
+                <li>Lenovo led in total quantity sold.</li>
+                <li>Premium products drove revenue spikes more than volume alone.</li>
+                <li>Shipping and tax tracking improved cost visibility.</li>
+            </ul>
+
+            <h3>Business Impact</h3>
+            <p>
+                The dashboard enables real-time performance monitoring, improved pricing decisions, 
+                better product strategy planning, and faster executive reporting. It converts raw 
+                transactional data into actionable business intelligence.
+            </p>
+
+            <h3>Live Dashboard</h3>
+            <div style="margin-top: 20px;">
+                <iframe 
+                    title="ALIBABA SALES DASHBOARD (MICRO DATA LAKE)" 
+                    width="100%" 
+                    height="500" 
+                    src="https://app.powerbi.com/view?r=eyJrIjoiZmFiMTNmNjktYjQyYi00M2RjLTk5MWMtY2RkNjExODBkZTNkIiwidCI6IjhiYmI4YjBmLWUxYzEtNGYxZS1hM2Q5LTIzZTFlNTFiYTBkMCIsImMiOjl9" 
+                    frameborder="0" 
+                    allowFullScreen="true">
+                </iframe>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+        <!-- About Page -->
+        <section id="about" class="section" style="display: none;">
+            <div class="about-hero">
+                <div class="container">
+                    <h1>About Us</h1>
+                    <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">Transforming raw data into strategic decision intelligence using AI-driven analytics systems.</p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="founder-section">
+                    <div class="founder-img">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="founder-bio">
+                        <h2>Muthareen Saher</h2>
+                        <h3>Founder & AI Analytics Strategist</h3>
+                        <p>With a strong background in Mathematics and over 8 years of experience in Business Intelligence, Muthareen combines technical expertise with strategic business acumen to deliver transformative analytics solutions.</p>
+                        <p>Her expertise spans Power BI, Python, Data Automation, and Predictive Modeling, with a vision to build smarter, data-driven organizations that thrive in the digital age.</p>
+                        <div class="expertise-grid">
+                            <div class="expertise-item">
+                                <i class="fas fa-calculator" style="font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 15px;"></i>
+                                <h4>Mathematics Background</h4>
+                            </div>
+                            <div class="expertise-item">
+                                <i class="fas fa-chart-bar" style="font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 15px;"></i>
+                                <h4>Business Intelligence</h4>
+                            </div>
+                            <div class="expertise-item">
+                                <i class="fas fa-robot" style="font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 15px;"></i>
+                                <h4>AI & Machine Learning</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Page -->
+        <section id="blog" class="section" style="display: none;">
+            <div class="container">
+                <h1>Insights & Articles</h1>
+                <div class="blog-grid">
+                    <!-- Blog content will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Page -->
+        <section id="contact" class="section" style="display: none;">
+            <div class="container">
+                <h1>Ready to Build an Intelligent Analytics System?</h1>
+                <div class="contact-grid">
+                    <div class="contact-form">
+                        <h3>Book a Strategy Call</h3>
+                        <form id="strategyForm">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" class="form-control" placeholder="your.email@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company</label>
+                                <input type="text" id="company" class="form-control" placeholder="Your Company">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">What challenges are you facing? *</label>
+                                <textarea id="message" class="form-control" rows="4" placeholder="Tell us about your data analytics needs..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                <i class="fas fa-paper-plane"></i>
+                                Schedule Your Call
+                            </button>
+                        </form>
+                    </div>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email Us</h4>
+                                <p>hello@muthareenanalytics.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fab fa-linkedin"></i>
+                            <div>
+                                <h4>Connect on LinkedIn</h4>
+                                <p>linkedin.com/in/muthareen-saher</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>Call Us</h4>
+                                <p>+1 (234) 567-8900</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Muthareen Analytics</h3>
+                    <p>AI-powered Business Intelligence and Analytics solutions for forward-thinking businesses.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services">AI Business Intelligence</a></li>
+                        <li><a href="#services">Predictive Analytics</a></li>
+                        <li><a href="#services">Marketing Analytics</a></li>
+                        <li><a href="#services">Data Automation</a></li>
+                        <li><a href="#services">KPI Strategy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#case-studies">Case Studies</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#contact">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">White Papers</a></li>
+                        <li><a href="#">Analytics Guides</a></li>
+                        <li><a href="#">Webinars</a></li>
+                        <li><a href="#">Tools & Templates</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Muthareen Analytics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Loading screen
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('loading').style.display = 'none';
+            }, 500);
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                // Handle navigation between pages
+                if (targetId === '#home' || targetId === '#services' || 
+                    targetId === '#case-studies' || targetId === '#about' || 
+                    targetId === '#blog' || targetId === '#contact') {
+                    
+                    // Hide all sections
+                    document.querySelectorAll('main > section').forEach(section => {
+                        section.style.display = 'none';
+                    });
+                    
+                    // Show target section
+                    document.querySelector(targetId).style.display = 'block';
+                    
+                    // Update active nav link
+                    document.querySelectorAll('.nav-links a').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                    
+                    // Scroll to top
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    
+                    return;
+                }
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Sticky header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                header.style.boxShadow = 'none';
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+
+        // Form submission
+        document.getElementById('strategyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            
+            // Create Calendly link or show success message
+            const calendlyLink = `https://calendly.com/muthareen-analytics/strategy-call?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}`;
+            
+            // Open Calendly in new tab
+            window.open(calendlyLink, '_blank');
+            
+            // Show success message
+            alert(`Thank you ${name}! You'll be redirected to schedule your strategy call.`);
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Page transition animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.card, .problem-card, .solution-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Initialize with Home page visible
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('home').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
